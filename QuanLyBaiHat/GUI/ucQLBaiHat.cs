@@ -46,6 +46,18 @@ namespace QuanLyBaiHat.GUI
                                        NamPhatHanh = p.NAMPHATHANH
                                    })
                                    .ToList();
+
+            /// Load Index
+            try
+            {
+                index = index1;
+                dgvBAIHAT.Rows[index].Cells["STT"].Selected = true;
+                dgvBAIHAT.Select();
+            }
+            catch
+            {
+
+            }
         }
         private void ucQLBaiHat_Load(object sender, EventArgs e)
         {
